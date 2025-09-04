@@ -17,7 +17,8 @@ export default function Index() {
       <View
         style={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
+          justifyContent: "space-between",
         }}>
         <Text>Codnify Technologies</Text>
         <Image
@@ -27,16 +28,32 @@ export default function Index() {
           style={{
             width: 50,
             height: 50,
+            borderRadius: 50,
           }}
         />
       </View>
       <View
         style={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          margin: 20,
         }}>
         <View>
-          <TextInput placeholder="Search for service..." />
+          <TextInput
+            placeholder="Search for service..."
+            style={{
+              padding: 15,
+              width: 350,
+              backgroundColor: "white",
+              // backgroundColor: "#fff",
+              // // shadowColor: "#000",
+              // // shadowOffset: { width: 0, height: 2 },
+              // // shadowOpacity: 0.025,
+              // // shadowRadius: 3.84,
+              // width:150
+            }}
+          />
         </View>
         <View>
           <Image
@@ -49,17 +66,54 @@ export default function Index() {
         </View>
       </View>
       <View>
-        <Text>Product</Text>
-        <View
+        <Text
           style={{
-            flexDirection: "column",
+            fontSize: 50,
           }}>
-          <Text>Web Development</Text>
-          <Text>Web Design</Text>
-          <Text>Custom Software</Text>
-          <Text>Consultation</Text>
-          <Text>Project Management</Text>
-        </View>
+          Services
+        </Text>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          style={{
+            padding: 30,
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+            }}>
+            <Text
+              style={{
+                margin: 10,
+              }}>
+              Web Development
+            </Text>
+            <Text
+              style={{
+                margin: 10,
+              }}>
+              Web Design
+            </Text>
+            <Text
+              style={{
+                margin: 10,
+              }}>
+              Custom Software
+            </Text>
+            <Text
+              style={{
+                margin: 10,
+              }}>
+              Consultation
+            </Text>
+            <Text
+              style={{
+                margin: 10,
+              }}>
+              Project Management
+            </Text>
+          </View>
+        </ScrollView>
       </View>
       <View>
         <Image
@@ -72,52 +126,95 @@ export default function Index() {
           }}
         />
       </View>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flexWrap: "wrap",
-          }}>
-          <View>
-            <Image
-              source={{
-                uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
-              }}
-              style={{
-                width: 150,
-                height: 150,
-              }}></Image>
-            <TouchableOpacity style={{}} onPress={handlePress}>
-              <Text>Software</Text>
-            </TouchableOpacity>
-          </View>
-          <View>
-            <Image
-              source={{
-                uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
-              }}
-              style={{
-                width: 150,
-                height: 150,
-              }}></Image>
-            <TouchableOpacity style={{}} onPress={handlePress}>
-              <Text>Software</Text>
-            </TouchableOpacity>
-          </View>
-          <View>
-            <Image
-              source={{
-                uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
-              }}
-              style={{
-                width: 150,
-                height: 150,
-              }}></Image>
-            <TouchableOpacity style={{}} onPress={handlePress}>
-              <Text>Software</Text>
-            </TouchableOpacity>
-          </View>
+     <ScrollView
+  contentContainerStyle={{
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    padding: 20,
+    rowGap: 20, // Optional: works in React Native 0.72+
+  }}
+  showsVerticalScrollIndicator={false}
+  style={{ marginTop: 30 }}
+>
+
+        <View>
+          <Image
+            source={{
+              uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
+            }}
+            style={{
+              width: 200,
+              height: 150,
+            }}></Image>
+          <TouchableOpacity style={{}} onPress={handlePress}>
+            <Text>Software</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <Image
+            source={{
+              uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
+            }}
+            style={{
+              width: 200,
+              height: 150,
+            }}></Image>
+          <TouchableOpacity style={{}} onPress={handlePress}>
+            <Text>Software</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <Image
+            source={{
+              uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
+            }}
+            style={{
+              width: 200,
+              height: 150,
+            }}></Image>
+          <TouchableOpacity style={{}} onPress={handlePress}>
+            <Text>Software</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <Image
+            source={{
+              uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
+            }}
+            style={{
+              width: 200,
+              height: 150,
+            }}></Image>
+          <TouchableOpacity style={{}} onPress={handlePress}>
+            <Text>Software</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <Image
+            source={{
+              uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
+            }}
+            style={{
+              width: 200,
+              height: 150,
+            }}></Image>
+          <TouchableOpacity style={{}} onPress={handlePress}>
+            <Text>Software</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <Image
+            source={{
+              uri: "https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmV8ZW58MHx8MHx8fDA%3D",
+            }}
+            style={{
+              width: 200,
+              height: 150,
+            }}></Image>
+          <TouchableOpacity style={{}} onPress={handlePress}>
+            <Text>Software</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
